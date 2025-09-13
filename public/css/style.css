@@ -1,0 +1,33 @@
+/*
+    Paleta
+    Principal - #0378A6
+    Secundaria - #0477BF
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Color Theme Swatches in Hex */
+
+:root {
+    --cor-1: #0378A6;
+    --cor-2: #0477BF; 
+    --cor-3: #ACD7F2;
+    --cor-4: #F2F2F2;
+    --texto-principal: 'Merriweather', sans-serif;
+    --titulos: 'Mulish', sans-serif
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--texto-principal);
+}
+
+body {
+    background-color: var(--cor-4);
+    min-height: 100vh;
+    font-family: var(--texto-principal);
+}
+
