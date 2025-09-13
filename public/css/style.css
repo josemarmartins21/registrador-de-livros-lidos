@@ -31,3 +31,162 @@ body {
     font-family: var(--texto-principal);
 }
 
+/* Generals */
+
+p {
+    line-height: 1.5em;
+}
+
+header {
+    background-color: var(--cor-2);
+    display: flex;
+    padding: 0 16px 5px 16px;
+
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 14px;
+}
+
+li > a {
+    text-decoration: none;
+    color: var(--cor-4);
+    font-size: 15.5px;
+    font-family: var(--titulos);
+    transition: color .3s;
+}
+
+li > a:hover {
+    color: #e6e6e6;
+}
+
+#menu {
+    flex-grow: 1;
+    align-self: center;
+    text-align: center;
+}
+
+/* Hero */
+
+#hero  {
+    display: flex;
+    margin-bottom: 90px;
+    
+}
+
+#img-hero, #card-hero {
+    border: 3px solid black;
+    flex-grow: 1;
+}
+
+#card-hero {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3em;
+
+}
+
+#card-hero h3 {
+    width: 394px;
+    font-family: var(--titulos);
+    font-weight: 800;
+}
+
+/* #card-hero > h3, #card-hero > p, {
+    
+}  */
+
+#card-hero > p {
+    text-align: justify;
+}
+
+ #links > a {
+    background-color: var(--cor-2);
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    margin: 0 5px;
+    font-weight: bold;
+    box-shadow: 1px 1px 14px rgba(0, 0, 0, 0.178);
+ }
+
+  #links > a:last-child {
+    background-color: var(--cor-3);
+    color: rgb(105, 105, 105);
+  }
+
+#card-hero > p {
+    width: 400px;
+}
+
+/* Cards */
+
+#livros h2 {
+    font-weight: 700;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#livros > p {
+    text-align: center;
+    padding: 10px 0 20px 0;
+}
+
+#container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+}
+
+#container .card {
+    outline: 1px solid black;
+    flex: 0 1 32%;
+}
+
+
+#content {
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#content > span, #content > h3, #content > a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+div#info {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    margin-bottom: 9px;
+}
+
+#content > a {
+    align-self: flex-end;
+    padding: 10px;
+    background-color: var(--cor-2);
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+
+}

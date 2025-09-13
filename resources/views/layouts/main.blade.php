@@ -10,8 +10,9 @@
 <body>
     <header>
         <div class="item" id="img">
-
+            <img src="/img/qos-logo-sem-fundo.png" alt="logo da qos" width="160px" title="QoS Tel">
         </div>
+
         <div class="item" id="menu">
             <ul>
                 <li><a href="#">Home</a></li>

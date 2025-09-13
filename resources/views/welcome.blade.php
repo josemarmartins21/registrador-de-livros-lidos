@@ -6,11 +6,12 @@
     <section id="home">
         <div id="hero">
             <div id="img-hero">
-
+                <img src="/img/iPhone-6.jpg" alt="iPhone 6 normal" title="iPhone 6 normal">
             </div>
-            
+
             <div id="card-hero">
-                <h3>Heading</h3>
+
+                <h3>Ultimo livro lido</h3>
 
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nihil rerum id adipisci ratione quidem optio, quaerat accusantium officiis iste possimus vitae voluptatibus quis, quod qui. Consectetur a perferendis itaque?
@@ -24,31 +25,45 @@
         </div>
         <div id="livros">
             <h2>Livros</h2>
+
+            <p>
+                Os ultimos 5 livros que eu li
+            </p>
+
             <div id="container">
                 <div class="card">
-                    <img src="" alt="">
-                    <span>12/06/2005</span>
-                    <span>Categoria</span>
-                    <h3>Titulo</h3>
-                    <a href="#">Ver mais</a>
+                    <img src="/img/p-diddy.jpeg" alt="p diddy">
+                    <div id="content">
+                        <div id="info">
+                            <span>12/06/2005</span>
+                            <span>Categoria</span>
+                        </div>
+                        <h3>Titulo</h3>
+                        <a href="#">Ver mais</a>
+                    </div>
                 </div>
-
                 <div class="card">
-                    <img src="" alt="">
-                    <span>12/06/2005</span>
-                    <span>Categoria</span>
-                    <h3>Titulo</h3>
-                    <a href="#">Ver mais</a>
+                    <img src="/img/p-diddy.jpeg" alt="p diddy">
+                    <div id="content">
+                        <div id="info">
+                            <span>12/06/2005</span>
+                            <span>Categoria</span>
+                        </div>
+                        <h3>Titulo</h3>
+                        <a href="#">Ver mais</a>
+                    </div>
                 </div>
-
                 <div class="card">
-                    <img src="" alt="">
-                    <span>12/06/2005</span>
-                    <span>Categoria</span>
-                    <h3>Titulo</h3>
-                    <a href="#">Ver mais</a>
-                </div>
-                
+                    <img src="/img/p-diddy.jpeg" alt="p diddy">
+                    <div id="content">
+                        <div id="info">
+                            <span>12/06/2005</span>
+                            <span>Categoria</span>
+                        </div>
+                        <h3>Titulo</h3>
+                        <a href="#">Ver mais</a>
+                    </div>
+                </div>             
             </div>
         </div>
     </section>
