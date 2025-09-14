@@ -6,12 +6,12 @@
     <section id="home">
         <div id="hero">
             <div id="img-hero">
-                <img src="/img/iPhone-6.jpg" alt="iPhone 6 normal" title="iPhone 6 normal">
+                <img src="/img/augusto-cury-removebg-preview.png" alt="iPhone 6 normal" title="iPhone 6 normal">
             </div>
 
             <div id="card-hero">
 
-                <h3>Ultimo livro lido</h3>
+                <h2>Ultimo livro lido</h2>
 
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nihil rerum id adipisci ratione quidem optio, quaerat accusantium officiis iste possimus vitae voluptatibus quis, quod qui. Consectetur a perferendis itaque?
@@ -23,11 +23,14 @@
                 </div>
             </div>
         </div>
+
+        <hr id="hr">
+
         <div id="livros">
             <h2>Livros</h2>
 
             <p>
-                Os ultimos 5 livros que eu li
+                Os ultimos 5 livros que eu li.
             </p>
 
             <div id="container">

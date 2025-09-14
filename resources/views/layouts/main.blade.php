@@ -10,19 +10,20 @@
 <body>
     <header>
         <div class="item" id="img">
-            <img src="/img/qos-logo-sem-fundo.png" alt="logo da qos" width="160px" title="QoS Tel">
+            <a href="/"><img src="/img/qos-logo-sem-fundo.png" alt="logo da qos" width="160px" title="QoS Tel"></a>
         </div>
 
         <div class="item" id="menu">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Livros</a></li>
-                <li><a href="#">Autores</a></li>
-                <li><a href="#">Uploads</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="{{route('livros.dashboard')}}">Dashboard</a></li>
+                <li><a href="/livros">Livros</a></li>
+                <li><a href="{{ route('autores.index') }}">Autores</a></li>
+                <li><a href="{{ route('create')}}">Uploads</a></li>
             </ul>
         </div>
     </header>
+    <hr>
     <main>
         @yield('content')
     </main>
