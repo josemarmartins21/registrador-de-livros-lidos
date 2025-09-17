@@ -6,7 +6,7 @@
     <section id="home">
         <div id="hero">
             <div id="img-hero">
-                <img src="/img/augusto-cury-removebg-preview.png" alt="iPhone 6 normal" title="iPhone 6 normal">
+                <img src="/img/augusto-cury.png" alt="iPhone 6 normal" title="iPhone 6 normal">
             </div>
 
             <div id="card-hero">
@@ -18,8 +18,8 @@
                 </p>
 
                 <div id="links">
-                    <a href="#">Ver outros livros</a>
                     <a href="#">Saber mais acerca deste livro</a>
+                    <a href="#">Ver outros livros</a>
                 </div>
             </div>
         </div>
