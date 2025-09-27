@@ -7,11 +7,16 @@
     <section id="create-livro">
         <div id="forms">
             <h2>Adicione um livro</h2>
-            <form action="" method="post">
+            <form action="{{ route('livros.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                
                 <div class="form-group">
                     <label for="titulo">Titulo</label>
                     <input type="text" name="titulo" id="titulo" required placeholder="Digite o titulo do livro" autocomplete="off" maxlength="30">
+                </div>
+                <div class="form-group">
+                    <label for="breve_descricao">Breve descrição</label>
+                    <textarea name="breve_descricao" id="breve_descricao" cols="30" rows="10" placeholder="Dá uma introdução do livro" maxlength="150"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="descricao">Descrição</label>
@@ -19,7 +24,7 @@
                 </div>
                 <div class="form-group">
                     <label for="comentario">O que achaste do livro?</label>
-                    <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Fale sobre o livro mas do teu ponto de vista"></textarea>
+                    <textarea name="nota_do_leitor" id="nota_do_leitor" cols="30" rows="10" placeholder="Fale sobre o livro mas do teu ponto de vista"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="numero_de_paginas">Nª de páginas do livro</label>
@@ -27,15 +32,15 @@
                 </div>
                 <div class="form-group">
                     <label for="ano_de_lancamento">Ano de lançamento</label>
-                    <input type="date" name="ano_de_lancamento" id="ano_de_lancamento" required>
+                    <input type="date" name="data_de_lancamento" id="ano_de_lancamento" required>
                 </div>
                 <div class="form-group">
                     <label for="comeco">Data que iniciaste a leitura</label>
-                    <input type="date" name="comeco" id="comeco">
+                    <input type="date" name="comeco_da_leitura" id="comeco">
                 </div>
                 <div class="form-group">
-                    <label for="comeco">Data que iniciaste a leitura</label>
-                    <input type="date" name="comeco" id="comeco">
+                    <label for="comeco">Data que terminaste a leitura</label>
+                    <input type="date" name="fim_da_leitura" id="comeco">
                 </div>
                 <div class="form-group">
                     <label for="imagem_1">Imagem do livro</label>

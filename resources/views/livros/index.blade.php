@@ -7,41 +7,26 @@
         <div id="all-livros">
             <h2>Todos os livros que eu já li</h2>
             <div id="all-books-card">
-                <div class="card-book">
-                    <div class="img-content">
-                        <img src="/img/augusto-cury.png" alt="imagem do livro">
-                    </div>
-                    <div class="info">
-                        <h3>Titulo</h3>
-                        <p>
-                            Breve descrição
-                        </p>
-                    </div>
-                </div>
+                @foreach ($livros as $livro)
+                    <div class="card-book">
+                        <div class="img-content">
+                            <img src="/img/uploads/{{ $livro->imagem_1 }}" alt="imagem do livro">
+                        </div>
+                        <div class="info">
+                            <h3>{{ $livro->titulo }}</h3>
+                            <div id="acoes">
+                                <a href="#">
+                                    <i class="fa-solid fa-pen-to-square" id="green"></i>
+                                </a>
 
-                <div class="card-book">
-                    <div class="img-content">
-                        <img src="/img/augusto-cury.png" alt="imagem do livro">
+                                <a href="#">
+                                    <i class="fa-solid fa-trash-can" id="red"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="info">
-                        <h3>Titulo</h3>
-                        <p>
-                            Breve descrição
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card-book">
-                    <div class="img-content">
-                        <img src="/img/augusto-cury.png" alt="imagem do livro">
-                    </div>
-                    <div class="info">
-                        <h3>Titulo</h3>
-                        <p>
-                            Breve descrição
-                        </p>
-                    </div>
-                </div>
+                    
+                @endforeach
             </div>
         </div>
     </section>

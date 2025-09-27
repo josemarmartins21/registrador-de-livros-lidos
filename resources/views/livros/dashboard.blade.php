@@ -10,29 +10,30 @@
                 <thead>
                     <tr>
                         <th>Titulo do livro</th>
-                        <th>Descrição</th>
-                        <th>Comentario acerca do livros</th>
                         <th>Ano de lançamento</th>
-                        <th>1ª Data de leitura</th>
-                        <th>2ª Data de leitura</th>
+                        <th>Data de inicio de leitura</th>
+                        <th>Data de fim de leitura</th>
                         <th>Nª de páginas</th>
+                        <th>Ver mais</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($livros as $livro)
                     <tr>
-                        <td>Poder da esperança</td>
-                        <td>Lorem ipsum dol</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adi</td>
-                        <td>2025-08-12</td>
-                        <td>2015-09-04</td>
-                        <td>2012-08-07</td>
-                        <td>354</td>
+                        <td>{{ ucwords($livro->titulo) }}</td>
+                        <td>{{ $livro->data_de_lancamento->format('d/m/Y') }}</td>
+                        <td>{{ $livro->comeco_da_leitura->format('d/m/Y') }}</td>
+                        <td>{{ $livro->fim_da_leitura->format('d/m/Y') }}</td>
+                        <td>{{ $livro->numero_de_paginas }}</td>
+                        <td><a href="/livro/{{ $livro->id }}">Ver livro</a></td>
                     </tr>
+                        
+                    @endforeach
                 </tbody>
                 <tfoot >
                     <tr>
                         <th colspan="6" style="text-align: left">Total de livros</th>
-                        <td>54</td>
+                        <td>{{ $quantidade_de_livros }}</td>
                     </tr>
                 </tfoot>
             </table>
