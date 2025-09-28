@@ -29,6 +29,7 @@ body {
     background-color: var(--cor-4);
     min-height: 100vh;
     font-family: var(--texto-principal);
+    position: relative;
 }
 
 /* Generals */
@@ -68,14 +69,9 @@ li > a:hover {
 }
 
 /* Hero */
-
 #hero  {
     display: flex;
     height: 60vh;
-}
-
-section#home #hr {
-    margin-bottom: 250px;
 }
 
 #card-hero {
@@ -160,7 +156,9 @@ section#home #hr {
 }
 
 /* Cards */
-
+#livros {
+    padding-bottom: 100px;
+}
 #livros h2 {
     font-weight: 700;
     font-size: 3em;
@@ -183,20 +181,28 @@ section#home #hr {
 
     gap: 20px;
     max-width: 84%; 
-    margin: auto;
-    margin-bottom: 250px;
+    margin: 0 auto;
 
 }
 
 .card {
     border-radius: 10px;
     overflow: hidden;
+    height: 325px;
+}
+
+.pequena {
+    max-height: 208px;
+    background-color: rgba(0, 0, 0, 0.041);
 }
 
 .card img {
     display: block;
-    width: 100%;
+    height: 206px;
+    margin: auto;
 }
+
+
 
 #container .card {
     outline: 1px solid black;
@@ -259,6 +265,11 @@ section#dashboard {
     padding-bottom: 550px;
 }
 
+section#dashboard h1, section#index-livros h1 {
+    text-align: center;
+    margin-top: 15%;
+}
+
 section#autores {
     padding-bottom: 600px;
 }
@@ -278,22 +289,37 @@ table {
 
 table tr {
     border-bottom: 1px solid rgba(0, 0, 0, 0.514);
-    padding: 20px;
+    
+}
+
+table tr:hover {
+    background-color: rgba(0, 0, 0, 0.082);
+
 }
 
 th, td {
     text-align: center;
+    padding: 7px 0;
+}
+
+tfoot td {
+    text-align: right;
+}
+
+tfoot th {
+    text-align: left;
 }
 
 /* Create */
+section#create {
+    height: 105vh;
+}
 
 div#actions {
     max-width: 800px;
-    margin: 80px auto;
+    margin: auto;
 }
-#create {
-    margin-bottom: 200px;
-}
+
 .options {
     display: flex;
     margin: 20px 0;
@@ -331,9 +357,9 @@ div#actions {
     order: -2;
 }
 /* Create livros / autores */
-#create-livro, #create-autor {
-    margin: 60px 0;
-    
+section#create-livro {
+    height: 120vh;
+
 }
 #forms {
     max-width: 1000px;
@@ -343,9 +369,15 @@ div#actions {
 
 
 #forms form, #forms h2 {
-    width: 380px;
+    width: 80%;
     margin: auto;
     
+}
+
+#forms form {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
 }
 
 #forms h2 {
@@ -361,16 +393,13 @@ div#actions {
     margin-bottom: 14px;
     gap: 5px;
     font-family: var(--titulos);
+    flex: 0 1 388px;
 }
 
 label {
     font-weight: bold;
     font-family: var(--titulos);
 }
-
-/* textarea {
-    padding: ;
-} */
 
 input, textarea, select {
     padding: 12px;
@@ -460,6 +489,9 @@ footer {
     background-color: black;
     color: white;
     padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {

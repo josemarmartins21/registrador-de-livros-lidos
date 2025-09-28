@@ -14,15 +14,5 @@ class Livro extends Model
         'comeco_da_leitura' => 'datetime',
     ];
 
-    public static function ultimoLivro() {
-        return DB::select('SELECT * FROM Livros ORDER BY id DESC LIMIT 1');
-    }
-
-    public static function ultimosCincoLivros() {
-        return DB::select('SELECT * FROM Livros LIMIT 5');
-    }
-
-    public function autores() {
-        return $this->belongsTo(Autor::class);
-    }
+    protected $guarded = []; // permite preenchimento em massa
 }

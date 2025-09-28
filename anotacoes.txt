@@ -1,0 +1,6 @@
+   orderBy('id', 'desc')->limit(5)->get();
+
+    $livro = Livro::orderBy('id', 'desc')->limit(1)->get();
+    $autore_livros = Autor::with('livros')->get();
+    echo "<pre>";
+    var_dump($autore_livros); */

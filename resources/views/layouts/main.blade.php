@@ -19,7 +19,6 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="{{route('livros.dashboard')}}">Dashboard</a></li>
                 <li><a href="/livros">Livros</a></li>
-                <li><a href="{{ route('autores.index') }}">Autores</a></li>
                 <li><a href="{{ route('create')}}">Uploads</a></li>
             </ul>
         </div>

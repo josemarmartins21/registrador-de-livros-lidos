@@ -6,16 +6,16 @@
     <section id="home">
         <div id="hero">
             <div id="img-hero">
-                <img src="/img/uploads/{{ $livro[0]->imagem_1 ?? ""}}" alt="iPhone 6 normal" title="iPhone 6 normal">
+                <img src="/img/uploads/{{ $livro[0]?->imagem_1?? "biblia.jpg" }}" alt="{{$livro[0]?->titulo??''}}" title="{{ $livro[0]->titulo?? "Biblia" }}">    
             </div>
 
             <div id="card-hero">
 
                 <h1>Último livro que eu li</h1>
-                <h2>{{ $livro[0]->titulo ?? "'Nenhum adicionado! '"}}</h2>
+                <h2>{{ $livro[0]->titulo ?? "Nenhum livro adicionado "}}</h2>
                 
                 <p>
-                    {{ $livro[0]->nota_do_leitor ?? "" }}
+                    {{ $livro[0]?->nota_do_leitor ?? "" }}
                 </p>
                 
                 <div id="links">
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <h2>{{ $nome_autor }}</h2>
+        <h2>{{ $nome_autor??'' }}</h2>
 
         <hr id="hr">
 
@@ -38,14 +38,17 @@
             <div id="container">
                 @foreach ($livros as $livro)
                 <div class="card">
-                    <img src="/img/uploads/{{ $livro->imagem_1 }}" alt="p diddy">
+                    <div class="pequena">
+                        <img src="/img/uploads/{{ $livro->imagem_1 }}" alt="{{ $livro->titulo }}">
+                    </div>
+
                     <div id="content">
-                        <div id="info">
-                            <span>Data de lançamento</span>
-                            <span>{{ $livro->data_de_lancamento->format('d/m/Y') }}</span>
-                        </div>
                         <h3>{{ ucwords($livro->titulo) }}</h3>
                         <a href="/livros/{{ $livro->id }}">Ver mais</a>
+                     {{--    <div id="info">
+                            <span>Data de lançamento</span>
+                            <span>{{ $livro->data_de_lancamento->format('d/m/Y') }}</span>
+                        </div> --}}
                     </div>
                 </div>
                 @endforeach

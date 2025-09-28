@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('numero_de_paginas');
             $table->date('data_de_lancamento');
             $table->date('comeco_da_leitura');
-            $table->date('fim_da_leitura');
+            $table->date('fim_da_leitura')->nullable();
             $table->string('imagem_1');
             $table->string('imagem_2')->nullable();
         });

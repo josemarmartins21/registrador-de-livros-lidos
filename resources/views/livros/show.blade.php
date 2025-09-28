@@ -1,7 +1,9 @@
 @extends('layouts.main')
 
-@section('title', '[Nome do livro]')
+@section('title', $livro->titulo)
     
 @section('content')
-
+    <section id="show">
+        
+    </section>
 @endsection

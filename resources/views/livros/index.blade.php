@@ -4,6 +4,7 @@
 
 @section('content')
     <section id="index-livros">
+        @if (count($livros) > 0)
         <div id="all-livros">
             <h2>Todos os livros que eu já li</h2>
             <div id="all-books-card">
@@ -15,13 +16,14 @@
                         <div class="info">
                             <h3>{{ $livro->titulo }}</h3>
                             <div id="acoes">
-                                <a href="#">
+                                <a href="/livros/{{ $livro->id }}/edit">
                                     <i class="fa-solid fa-pen-to-square" id="green"></i>
                                 </a>
-
-                                <a href="#">
-                                    <i class="fa-solid fa-trash-can" id="red"></i>
-                                </a>
+                            <form action="/livros/{{$livro->id}}" method="POST">
+                                @method('Delete')
+                                @csrf
+                                <button class="fa-solid fa-trash-can" id="red"></button>
+                            </form>
                             </div>
                         </div>
                     </div>
@@ -29,5 +31,9 @@
                 @endforeach
             </div>
         </div>
+    
+        @else
+            <h1 >Nenhum livro ainda. <a href="/livros/create">Clica aqui para adicionar</a></h1>
+        @endif
     </section>
 @endsection
