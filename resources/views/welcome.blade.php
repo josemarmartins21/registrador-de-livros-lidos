@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Home')
+@section('title', 'Dashboard')
     
 @section('content')
     <section id="home">
@@ -45,10 +45,6 @@
                     <div id="content">
                         <h3>{{ ucwords($livro->titulo) }}</h3>
                         <a href="/livros/{{ $livro->id }}">Ver mais</a>
-                     {{--    <div id="info">
-                            <span>Data de lançamento</span>
-                            <span>{{ $livro->data_de_lancamento->format('d/m/Y') }}</span>
-                        </div> --}}
                     </div>
                 </div>
                 @endforeach

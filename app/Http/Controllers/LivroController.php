@@ -28,7 +28,6 @@ class LivroController extends Controller
     public function index()
     {
         $livros = Livro::all();
-    
         return view('livros.index', ['livros' => $livros]);
     }
 
@@ -45,11 +44,8 @@ class LivroController extends Controller
      */
     public function store(LivroRequest $request)
     {
-        
         $request->validated();
-
         $livro = new Livro();
-
         $livro->titulo = ucwords($request->titulo);
         $livro->descricao = ucfirst($request->descricao);
         $livro->nota_do_leitor = ucfirst($request->nota_do_leitor);
@@ -58,8 +54,6 @@ class LivroController extends Controller
         $livro->comeco_da_leitura = $request->comeco_da_leitura;
         $livro->fim_da_leitura = $request->fim_da_leitura;
         $livro->nome_autor = ucwords($livro->nome_autor);
-
-        
         /**
          * Percorre todas as requisições de file de imagem dentro
          * de um array e vê se cada imagem é válida e salva no banco se for
@@ -67,7 +61,6 @@ class LivroController extends Controller
          */
         for ($i=0; $i < 3; $i++) { 
             $img = $this->validarImagens($request, $this->imagens[$i]);
-            
             if ($i == 0 AND is_string($img)) {
                 $livro->imagem_1 = $img;
 
@@ -78,9 +71,7 @@ class LivroController extends Controller
                 $livro->foto_autor = $img;
             }
         }
-
         $livro->save();
-
         return redirect('/')->with('msg', 'Livro adicionado com sucesso!');
     }
 
@@ -90,7 +81,6 @@ class LivroController extends Controller
     public function show(string $id)
     {
         $livro = Livro::FindOrFail($id);
-
         return view('livros.show', ['livro' => $livro]);
     }
 
@@ -136,9 +126,7 @@ class LivroController extends Controller
             }
 
         }
-
         Livro::findOrFail(($request->id))->update($dados); // atualiza todos os dados que foram passados via request no model buscdo pelo ID enviado também por Request POST e salva com metodo update()
-
         return redirect('/livros')->with('msg', 'Registro atualizado com sucesso');
     }
 
@@ -148,18 +136,13 @@ class LivroController extends Controller
     public function destroy(string $id)
     {
         Livro::findOrFail($id)->delete();
-
         return redirect('livros');
-
     }
 
     public function dashboard()
     {
         $livros = Livro::all();
-
         $quantidade_de_livros = Livro::count();
-
-
         return view('livros.dashboard', ['livros' => $livros, 'quantidade_de_livros' => $quantidade_de_livros]);
     }
 
@@ -179,12 +162,9 @@ class LivroController extends Controller
             $imagem_name = md5($img_request->getClientOriginalName() . strtotime('now')) . "." . $extension;
             
             $img_request->move(public_path('/img/uploads'), $imagem_name);
-            
             return $imagem_name;
             
         }
-
-
         return false;
 
     }

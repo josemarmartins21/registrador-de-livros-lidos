@@ -1,12 +1,9 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LivroController;
-use App\Http\Controllers\AutorController;
 use App\Models\Livro;
-use App\Models\Autor;
-
 Route::get('/', function () {
-    $livros = Livro::all();
+    $livros = Livro::orderBy('created_at', 'desc')->limit(5)->get();
     $livro = Livro::orderBy('id', 'desc')->limit(1)->get();
     return view('welcome', ['livros' => $livros, 'livro' => $livro]);
 });

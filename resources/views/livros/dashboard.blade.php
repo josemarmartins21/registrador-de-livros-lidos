@@ -10,6 +10,7 @@
                 <caption>Livros</caption>
                 <thead>
                     <tr>
+                        <th>id</th>
                         <th>Titulo do livro</th>
                         <th>Ano de lançamento</th>
                         <th>Data de inicio de leitura</th>
@@ -21,6 +22,7 @@
                 <tbody>
                     @foreach ($livros as $livro)
                     <tr>
+                        <td style="font-weight: bold">{{ $loop->index + 1 }}</td>
                         <td>{{ ucwords($livro->titulo) }}</td>
                         <td>{{ $livro->data_de_lancamento->format('d/m/Y') }}</td>
                         <td>{{ $livro->comeco_da_leitura->format('d/m/Y') }}</td>
