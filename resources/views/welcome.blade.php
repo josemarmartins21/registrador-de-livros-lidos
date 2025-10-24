@@ -15,7 +15,7 @@
                 <h2>{{ $livro[0]->titulo ?? "Nenhum livro adicionado "}}</h2>
                 
                 <p>
-                    {{ $livro[0]?->nota_do_leitor ?? "" }}
+                    {{ $livro?? "" }}
                 </p>
                 
                 <div id="links">

@@ -1,15 +1,15 @@
 <?php
+
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LivroController;
 use App\Models\Livro;
-Route::get('/', function () {
-    $livros = Livro::orderBy('created_at', 'desc')->limit(5)->get();
-    $livro = Livro::orderBy('id', 'desc')->limit(1)->get();
-    return view('welcome', ['livros' => $livros, 'livro' => $livro]);
-});
+Route::get('/', [HomeController::class, 'index'])->name('welcome');
+
 Route::get('/uploads', function () {
     return view('create');
 })->name('create');
+
 Route::get('/dashboard', [LivroController::class, 'dashboard'])->name('livros.dashboard');
 Route::get('/livros/create', [LivroController::class, 'create'])->name('livros.create');
 Route::get('/livros', [LivroController::class, 'index'])->name('livros.index');

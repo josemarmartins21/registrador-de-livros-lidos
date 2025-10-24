@@ -15,4 +15,14 @@ class Livro extends Model
     ];
 
     protected $guarded = []; // permite preenchimento em massa
+
+    public static function buscarUltimoLivro(): array
+    {
+        return DB::select("SELECT  titulo, descricao FROM livros WHERE id = ?", [4]);
+    }
+
+    public static function buscarUltimosLivros()
+    {
+        return DB::select("SELECT * FROM livros LIMIT 5");
+    }
 }
